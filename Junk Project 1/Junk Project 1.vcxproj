@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DiceConsole.cpp" />
     <ClCompile Include="DiceHand.cpp" />
     <ClCompile Include="Die.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DiceConsole.h" />
     <ClInclude Include="DiceHand.h" />
     <ClInclude Include="Die.h" />
   </ItemGroup>

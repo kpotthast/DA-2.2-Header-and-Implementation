@@ -1,4 +1,23 @@
 #include "DiceHand.h"
+
+
+DiceHand::DiceHand()
+    : DiceHand(new Die[5], 5)
+{
+
+}
+
+DiceHand::DiceHand(Die* diceArray, int size)
+    : dice(diceArray), handSize(size)
+{
+}
+
+DiceHand::~DiceHand()
+{
+    delete[] dice;
+    dice = nullptr;
+}
+
 int DiceHand::getHandSize() const
 {
     return handSize;
@@ -9,14 +28,8 @@ Die* DiceHand::getDice() const
     return dice;
 }
 
-void DiceHand::setHandSize(int size)
-{
-    handSize = size;
-}
-
 void DiceHand::rollDie(int dieNum)
 {
-
     if (dieNum >= 0 && dieNum < handSize)
     {
         dice[dieNum].roll();

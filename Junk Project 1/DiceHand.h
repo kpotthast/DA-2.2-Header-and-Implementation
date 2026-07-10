@@ -1,5 +1,8 @@
 #pragma once
 #include "Die.h"
+#include <string>
+using namespace std;
+
 class DiceHand
 {
 private:
@@ -9,24 +12,16 @@ private:
 
 public:
 
-  
-    DiceHand()
-    {
-        handSize = 5;
-        dice = new Die[handSize];
-    }
+    DiceHand();
 
-    ~DiceHand()
-    {
-        delete[] dice;
-        dice = nullptr;
-    }
+    DiceHand(Die* diceArray, int size);
+
+    ~DiceHand();
 
     int getHandSize() const;
     Die* getDice() const;
-    void setHandSize(int size);
+
     void rollDie(int dieNum);
     void rollAllDice();
     string displayDieHand() const;
 };
-

@@ -1,4 +1,11 @@
 #include "Die.h"
+#include <cstdlib>   
+
+
+Die::Die(int sides) : numberOfSides(sides), faceValue(1)
+{
+
+}
 
 int Die::getNumberOfSides() const
 {
@@ -8,11 +15,6 @@ int Die::getNumberOfSides() const
 int Die::getFaceValue() const
 {
     return faceValue;
-}
-
-void Die::setNumberOfSides(int sides)
-{
-    numberOfSides = sides;
 }
 
 void Die::setFaceValue(int value)
